@@ -1,0 +1,80 @@
+<template>
+
+    <lightning-record-edit-form object-api-name="Account" onsuccess={handleSuccess}>
+        <lightning-messages>
+        </lightning-messages>
+        <lightning-accordion allow-multiple-sections-open class="example-accordion slds-grid slds-gutters"
+            active-section-name={fields_per_Account}>
+ 
+            <template class="slds-col slds-size_1-of-2" for:each={fields_per_section} for:item="accordion_item">
+                <lightning-accordion-section key={accordion_item.label} name={accordion_item.label}
+                    label={accordion_item.label}>
+                    
+                </lightning-accordion-section>
+            </template>
+        </lightning-accordion>
+ <!--
+        <div class="slds-align_absolute-center">
+            <lightning-button label="Cancel" title="Cancel" onclick={handleCancel} class="slds-m-left_x-small">
+            </lightning-button>
+            <lightning-button type="submit" variant="brand" label="Save" title="Save" class="slds-m-left_x-small">
+            </lightning-button>
+        </div>
+
+-->
+    </lightning-record-edit-form>  
+
+
+
+
+
+
+
+
+
+
+    <!--==========================================================================-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <lightning-record-edit-form object-api-name="Case" onsuccess={handleSuccess}>
+        <lightning-messages>
+        </lightning-messages>
+        <lightning-accordion allow-multiple-sections-open class="example-accordion slds-grid slds-gutters"
+            active-section-name={activeSections}>
+ 
+            <template class="slds-col slds-size_1-of-2" for:each={fields_per_section} for:item="accordion_item">
+                <lightning-accordion-section key={accordion_item.label} name={accordion_item.label}
+                    label={accordion_item.label}>
+                    <template for:each={accordion_item.fields} for:item="fieldFromSubsection">
+                        <lightning-input-field key={fieldFromSubsection} field-name={fieldFromSubsection}>
+                        </lightning-input-field>
+                    </template>
+                </lightning-accordion-section>
+            </template>
+        </lightning-accordion>
+ 
+        <div class="slds-align_absolute-center">
+            <lightning-button label="Cancel" title="Cancel" onclick={handleCancel} class="slds-m-left_x-small">
+            </lightning-button>
+            <lightning-button type="submit" variant="brand" label="Save" title="Save" class="slds-m-left_x-small">
+            </lightning-button>
+        </div>
+    </lightning-record-edit-form>  
+</template>

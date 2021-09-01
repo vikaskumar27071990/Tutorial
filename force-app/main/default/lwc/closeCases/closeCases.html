@@ -1,0 +1,75 @@
+<template>
+<lightning-card variant="Narrow" title="Close Multiple cases" icon-name="standard:case">
+<lightning-button variant="brand" label="Close Selected Cases" slot="actions" onclick={handleClick}></lightning-button>
+<div class="slds-p-horizontal_small">
+
+
+<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" aria-label="Example table of Opportunities with vertical borders">
+    <thead>
+        <tr class="slds-line-height_reset">
+            <th class="" scope="col">
+                <div class="slds-truncate" title="Case Number"></div>
+            </th>
+            <th class="" scope="col">
+                <div class="slds-truncate" title="Case Number">Case Number</div>
+            </th>
+            <th class="" scope="col">
+                <div class="slds-truncate" title="Subject">Subject</div>
+            </th>
+            <th class="" scope="col">
+                <div class="slds-truncate" title="Status">Status</div>
+            </th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr class="slds-hint-parent">
+            <th data-label="Opportunity Name" scope="row">
+                <lightning-input type="checkbox" name="name" variant="label-hidden"></lightning-input>
+            </th>
+            <td data-label="caseNumber">
+                <div class="slds-truncate" title="caseNumber">caseNumber</div>
+            </td>
+            <td data-label="subject">
+                <div class="slds-truncate" title="subject">subject</div>
+            </td>
+            <td data-label="Status">
+                <div class="slds-truncate" title="Status">Status</div>
+            </td>
+    </tr>
+
+        <tr class="slds-hint-parent">
+            <th data-label="Opportunity Name" scope="row">
+                <div class="slds-truncate" title="Cloudhub + Anypoint Connectors">
+                <a href="#" tabindex="-1">Cloudhub + Anypoint Connectors</a>
+                </div>
+            </th>
+            <td data-label="Account Name">
+                <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
+            </td>
+            <td data-label="Close Date">
+                <div class="slds-truncate" title="4/14/2015">4/14/2015</div>
+            </td>
+            <td data-label="Prospecting">
+                <div class="slds-truncate" title="Prospecting">Prospecting</div>
+            </td>
+            <td data-label="Confidence">
+                <div class="slds-truncate" title="20%">20%</div>
+            </td>
+            <td data-label="Amount">
+                <div class="slds-truncate" title="$25k">$25k</div>
+            </td>
+            <td data-label="Contact">
+                <div class="slds-truncate" title="jrogers@cloudhub.com">
+                <a href="#" tabindex="-1">jrogers@cloudhub.com</a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+    
+
+
+</div>
+<p slot="footer">Close multiple cases at once</p>
+</lightning-card>   
+</template>

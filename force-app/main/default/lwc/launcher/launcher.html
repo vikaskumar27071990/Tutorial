@@ -1,0 +1,14 @@
+<template>
+
+    <template if:false={loading}>
+        <button  onclick={open}>Open</button>
+    </template>
+
+
+    <template if:true={loading}>
+        <div>
+            <lightning-spinner size="small" variant="brand"></lightning-spinner>
+        </div>
+    </template>
+
+</template>

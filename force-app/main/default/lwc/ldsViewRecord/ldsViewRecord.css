@@ -1,0 +1,50 @@
+h1{
+    color:orange;
+}
+/*
+slds-m-around_small{
+    background-image: url(/resource/insta)
+    background-image: url('/resource/1623041716000/backgroundUrl');  
+}
+
+*/
+.slds-m-around_small{
+   
+    background-image: url(/resource/backgroundUrl)  
+}
+
+.slds-m-around_small{
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 100%;
+    height: 100%; 
+}
+/*
+.slds-m-around_small{
+    background-color: rgb(6, 252, 231);
+}
+*/
+.slds-m-around_small{
+    opacity: 0.9;
+}
+
+body { 
+    background-color: transparent;
+  }
+
+.insta{
+    width: 200%;
+    height: 100%;   
+}
+
+.THIS{
+    background-image: url('/resource/1623041716000/backgroundUrl') !important; 
+    }
+
+    .THIS.tile {
+        position:relative;
+        display: inline-block;
+        width: 100%;
+        height: 220px;
+        padding: 1px !important;
+    }

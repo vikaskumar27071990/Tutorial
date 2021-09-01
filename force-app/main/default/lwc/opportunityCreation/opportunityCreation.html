@@ -1,0 +1,50 @@
+<template>
+    <lightning-card>
+        <div slot="title">
+            <h1>             
+            BDS Opportunity Assingment (2021) 
+            </h1>
+            <div>
+                
+                <p><b>BDS Information</b></p>
+                <p class="slds-p-horizontal_small">
+                    <lightning-input type="text" label="BDS" value={accountRecord.BDS__c} required onchange={handleBDSChange}></lightning-input>
+                   </p>
+    
+                   <p class="slds-p-horizontal_small">
+                    <lightning-input type="text" label="BDS Email Address" value={accountRecord.BDS_Email_Address__c} required onchange={handleBDSEmailAddressChange}></lightning-input>
+                   </p>               
+                </div>
+            </div>
+
+
+
+        
+            <p><b>Opportunity Information</b></p>
+        <div slot="footer">
+                <lightning-button label="Create Opportunity" onclick={handleSaveAccount} variant="brand"></lightning-button>                
+                <lightning-badge label={accountid}></lightning-badge>
+                <lightning-badge label={error}></lightning-badge>
+
+                
+        </div>
+        <p class="slds-p-horizontal_small">
+            <lightning-input type="text" label="Opportunity Title" value={accountRecord.Name} onchange={handleNameChange}></lightning-input>     
+           <lightning-input type="text" label="Type" value={accountRecord.Type} onchange={handleTypeChange}></lightning-input>     
+            
+            <lightning-input type="text" label="Solicitation_Number" value={accountRecord.Solicitation_Number__c} onchange={handleBDSSolicitationNumberChange}></lightning-input>     
+            <lightning-input type="text" label="Agency" value={accountRecord.Agency__c} onchange={handleAgencyChange}></lightning-input>     
+            <lightning-input type="text" label="Office" value={accountRecord.Office__c} onchange={handleOfficeChange}></lightning-input>     
+            <lightning-input type="text" label="Lowest_Sub_Tier" value={accountRecord.Lowest_Sub_Tier__c} onchange={handleLowestSubTierChange}></lightning-input>     
+            <lightning-input type="text" label="Notice_Type" value={accountRecord.Notice_Type__c} onchange={handleNoticeTypeChange}></lightning-input>     
+
+            <lightning-input type="text" label="Stage Name" value={accountRecord.StageName} onchange={handleStageNameChange}></lightning-input>     
+            <lightning-input type="text" label="Close Date[MM/DD/YYYY]" value={accountRecord.CloseDate} onchange={handleCloseDateChange}></lightning-input>     
+            <!--
+            <lightning-input type="text" label="BDS" value={accountRecord.BDS__c} onchange={handleBDSChange}></lightning-input>     
+            <lightning-input type="text" label="BDS Email Address" value={accountRecord.BDS_Email_Address__c} onchange={handleBDSEmailAddressChange}></lightning-input>     
+            -->
+                        
+        </p>
+    </lightning-card>
+</template>

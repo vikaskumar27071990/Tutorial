@@ -1,0 +1,95 @@
+<template>
+    <div class="slds-m-around_small">
+        <lightning-card title="For Each Demo" icon-name="standard:contact" >
+            <!--
+1.for:each= which array we going to iterate,,in our case its {contacts}
+2.for:item=where we will storing information for particular object and for particular item ,,in this case its "item"
+3.for:index=to which particular index actully we are iterating,,,"index"
+
+4.To display value of each iteration,,we use this a sbest practice
+
+<p key={item.Id} class="slds-m-around_small">
+{index} - {item.Name} &nbsp; {item.Email}
+</p>
+
+===>Here we need to provide key of each iteration,, key is {item.Id}
+===>Key is required ,,so that if any chanes you makeing in that record ,,server get to know that record
+====>For key we can only use number Or String,,,we can't use Object or index as a key
+====>And for display the information we use 
+    {index} - {item.Name} &nbsp; {item.Email}
+ 
+        WE ITERATE LIST OF CONTACTS IN APEX LIKE THIS
+                         |
+                         V
+
+         for(Contact con : contacts){ }
+        
+                            
+-->
+            <template for:each={contacts} for:item="item" for:index="index" >
+                <p key={item.Id} class="slds-m-around_small">
+                   {index} - {item.Name} &nbsp; {item.Email}
+                </p>
+            </template>
+        </lightning-card>
+
+<!--=======X=====================X==============================X==================X==========X=====-->
+
+<!--            NOTES ON ITERATOR
+
+1.With help of iterator you going to understand that 
+  item you iteratiing is going to be the first record in a list or a last record in a list
+
+  2.How Iterator Works?
+Syntax:
+
+       listofRecord===========================>Which list of record you going to iterate
+       {properTyName.value.property('id' or 'email' etc)}==>Display Property
+
+        iterator:properTyName={listofRecord}
+        {properTyName.value.Email}
+-->
+
+
+<!-- 
+3.<template iterator:it={contacts}>
+Sol
+We iterated with template and it as a value,and then{contacts} i.e 
+list of record that we want to keep inside in our javascript class
+
+4.key={it.value.Id}
+sol. By this we goona get the id
+
+5.class="slds-m-around_small"   style="list-style-type: none; "
+Sol class and style as per our need
+
+6.<div if:true={it.first} class="list-first"></div>
+                            {it.value.Name} &nbsp; {it.value.Email}
+                        <div if:true={it.last} class="list-last"></div>
+ Sol. These two lines are key lines in terms of iterator.
+ 
+ 7.<div if:true={it.first} class="list-first"></div>
+ Sol.If the value or the key we processing is the first,,the the class should be list first.
+
+ 8.<div if:true={it.last} class="list-last"></div>
+ Sol.
+ If the value or the key we processing is the last,,the the class should be list last.
+-->
+        <lightning-card title="Iterator Demo" 
+                        icon-name="standard:contact" >
+                <template iterator:it={contacts}>
+                    <li key={it.value.Id} 
+                        class="slds-m-around_small" 
+                        style="list-style-type: none; " >
+                        <div if:true={it.first} class="list-first"></div>
+                            {it.value.Name} &nbsp; {it.value.Email}
+                        <div if:true={it.last} class="list-last"></div>
+                    </li>
+                </template>
+        </lightning-card>
+
+    </div>
+
+    
+    
+</template>

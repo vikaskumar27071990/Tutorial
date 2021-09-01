@@ -1,0 +1,16 @@
+<template>
+  <lightning-card title="Case Details" icon-name="standard:case">
+   <div class="slds-around_small">
+<template for:each={cases.data} for:item="item">
+<p key={item.Id}>
+{item.Subject}<br/>
+{item.Status}
+</p>
+</template>
+  <template if:true={cases.error}>
+       There is Error While featching Cases
+  </template>
+
+   </div>
+  </lightning-card>  
+</template>

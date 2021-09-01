@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Wraaper Class in Lwc" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <template if:true={wrapperList.data}>
+                <template for:each={wrapperList.data} for:item="wrapper">
+                    <p key={wrapper.accountId}>{wrapper.accountName}</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

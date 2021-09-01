@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Create a custom form validation in Lightning web component - LWC" icon-name="custom:custom12" size="small"> 
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--medium slds-m-bottom--medium">
+               <lightning-Input type="text" label="First Name" value={firstName} name="firstName" class="firstName" onchange={handleChangeValidation}></lightning-input>
+            </div>
+            
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--medium slds-m-bottom--medium">
+               <lightning-Input type="text"  label="Last Name" value={lastName} name="lastName" class="lastName" onchange={handleChangeValidation}></lightning-input>
+            </div>
+            
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--medium slds-m-bottom--medium">
+               <lightning-Input type="text" label="Email" value={userEmail} name="userEmail" class="userEmail" onchange={handleChangeValidation}></lightning-input>
+            </div>
+            
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--medium slds-m-bottom--medium">
+               <lightning-Input type="phone" label="Phone" value={userPhone} name="userPhone" class="userPhone" onchange={handleChangeValidation}></lightning-input>
+            </div>
+            
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--medium slds-m-bottom--medium">
+               <lightning-input type="checkbox" label="Status" name="statusCheckbox" class="statusActive" onchange={handleChangeValidation}></lightning-input>
+            </div>
+            
+            
+         </div>
+    </lightning-card>
+</template>

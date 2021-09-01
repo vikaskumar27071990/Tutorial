@@ -1,0 +1,25 @@
+<template>
+    <p class="slds-p-horizontal_small">
+        <lightning-input type="text" label="Opportunity Title" value={getAccountRecord.Name} pattern={alphanum_validation} onchange={nameInpChange}></lightning-input>
+       </p>
+       <p class="slds-p-horizontal_small">
+        <lightning-input type="text" label="Type"  value={getAccountRecord.Type}  onchange={typeInpChange}></lightning-input>
+       </p>
+       <!--
+       <p class="slds-p-horizontal_small">
+       <lightning-input-field field-name="Type" value={getAccountRecord.Type}  onchange={typeInpChange}></lightning-input-field>
+    </p>-->
+             <p class="slds-p-horizontal_small">
+              <lightning-input type="text" label="StageName" value={getAccountRecord.StageName} onchange={websiteInpChange}></lightning-input>
+             </p>
+               
+         
+             <p class="slds-p-horizontal_small">
+              <lightning-input type="date" label="CloseDate[MM/DD/YYYY]" value={getAccountRecord.CloseDate} onchange={accSiteChange}></lightning-input>       
+             </p> 
+             
+           <div slot="footer">
+             <lightning-button label="Submit" onclick={saveAccountAction} variant="brand"></lightning-button>
+           </div>
+          
+</template>

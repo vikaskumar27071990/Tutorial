@@ -1,0 +1,14 @@
+<template>
+    <div class="slds-m-around_small">
+        <lightning-input 
+            value={message1} 
+            label="Event Demo"
+            placeholder="Type your input here..."
+            onchange={handleChange}
+            onblur={handleChange}
+        ></lightning-input>
+        <lightning-button value="Click Me" 
+            variant="brand" label="Click Me" 
+            onclick={handleChange} ></lightning-button>
+    </div> 
+</template>

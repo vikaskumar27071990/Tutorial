@@ -1,0 +1,28 @@
+<template>
+
+    <div>
+        <template if:true={isTom}>
+            <img src="https://www.cartoon-clipart.co/amp/images/september122.gif"
+                width="100"
+                height="100"
+                />
+
+        </template>
+        
+        <template if:true={isJerry}>
+            <img src="https://www.freevector.com/uploads/vector/preview/7070/FreeVector-Jerry-Vector.jpg"
+            width="200"
+            height="200"
+        />
+    </template>
+    </div>
+
+    <div class="slds-m-around_small">
+        
+        <lightning-button label="Show Tom" variant="brand" onclick={showTom} >
+        </lightning-button>
+
+        <lightning-button label="Show Jerry" variant="brand" onclick={showJerry} >
+        </lightning-button>
+    </div>     
+</template>

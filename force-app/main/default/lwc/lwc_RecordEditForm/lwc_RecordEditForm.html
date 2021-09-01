@@ -1,0 +1,30 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+            Record Edit Form
+        </h3>
+        <div slot="footer">
+                
+        </div>
+        <div>
+            <lightning-record-edit-form object-api-name="Account" onsubmit={handleSubmit} onsuccess={handleSuccess}>
+                <lightning-messages>
+                </lightning-messages>
+                <lightning-input-field field-name="Name">
+                </lightning-input-field>
+                <lightning-input-field field-name="AccountNumber">
+                </lightning-input-field>
+                <lightning-input-field field-name="Phone">
+                </lightning-input-field>
+                <lightning-input-field field-name="Active__c">
+                </lightning-input-field>
+                <lightning-input-field field-name="ParentId">
+                </lightning-input-field>
+                
+                <lightning-button class="slds-m-top_small" type="submit" label="Save">
+                </lightning-button>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,31 @@
+<apex:page showHeader="false" sidebar="false" controller="ApexAngularDemo">
+<html ng-app="demoApp">
+<head>
+	<title>Demo Page</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+	<script type="text/javascript">
+	var demoApp = angular.module('demoApp',[]);
+	demoApp.controller('demoController', function($scope) {
+		$scope.data = JSON.parse('{!data}');
+	});
+</script>
+</head>
+<body ng-controller="demoController">
+	<label>Accounts</label>
+	<table class="table table-striped table-bordered">
+		<tr>
+			<td>Id</td>
+			<td>Name</td>
+		</tr>
+		<tr ng-repeat="entry in data">
+			<td>{{entry.recordId}}</td>
+			<td>{{entry.recordName}}</td>
+		</tr>
+	</table>
+</body>
+
+</html>	
+</apex:page>

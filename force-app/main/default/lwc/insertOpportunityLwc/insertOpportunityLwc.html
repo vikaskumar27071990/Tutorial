@@ -1,0 +1,35 @@
+<template>
+    <lightning-card>
+      <div slot="title">
+        <h3> 
+            <lightning-icon icon-name="standard:account" size="small"></lightning-icon> Create an Opportunity Using Apex Controller in LWC           
+         </h3>
+      </div>    
+   
+     <p class="slds-p-horizontal_small">
+       <lightning-input type="text" label="Name" value={getAccountRecord.Name} pattern={alphanum_validation} onchange={nameInpChange}></lightning-input>
+      </p>
+   <!--
+      <p class="slds-p-horizontal_small">
+       <lightning-input type="text" label="Phone" value={getAccountRecord.Phone} onchange={phoneInpChange}></lightning-input>
+      </p>
+   -->
+      <p class="slds-p-horizontal_small">
+        <lightning-input type="text" label="Type" value={getAccountRecord.Type} onchange={typeInpChange}></lightning-input>
+       </p>
+   
+       <p class="slds-p-horizontal_small">
+        <lightning-input type="text" label="StageName" value={getAccountRecord.StageName} onchange={websiteInpChange}></lightning-input>
+       </p>
+         
+   
+       <p class="slds-p-horizontal_small">
+        <lightning-input type="text" label="CloseDate[MM/DD/YYYY]" value={getAccountRecord.CloseDate} onchange={accSiteChange}></lightning-input>       
+       </p> 
+       
+     <div slot="footer">
+       <lightning-button label="Submit" onclick={saveAccountAction} variant="brand"></lightning-button>
+     </div>
+   
+   </lightning-card>
+  </template>

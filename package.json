@@ -1,0 +1,28 @@
+{
+  "name": "kumartechlwcvideos",
+  "version": "1.0.0",
+  "description": "Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:unit",
+    "test:unit": "sfdx-lwc-jest",
+    "test:unit:watch": "sfdx-lwc-jest --watch",
+    "test:unit:debug": "sfdx-lwc-jest --debug",
+    "test:unit:debug:watch": "sfdx-lwc-jest –debug --watch ",
+    "test:unit:coverage": "sfdx-lwc-jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kumartech7/kumartech7.0.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kumartech7/kumartech7.0/issues"
+  },
+  "homepage": "https://github.com/kumartech7/kumartech7.0#readme",
+  "devDependencies": {
+    "@salesforce/sfdx-lwc-jest": "^0.13.0"
+  }
+}

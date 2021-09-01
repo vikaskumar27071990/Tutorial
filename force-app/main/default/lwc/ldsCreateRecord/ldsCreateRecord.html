@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="lds Create Record" icon-name="custom:custom54">
+        <lightning-button type="Form" label="Button Create Child Case" variant="brand">
+        <div class="slds-m-around_small">
+            <lightning-record-edit-form
+            record-id={recordId}
+            object-api-name={objectApiName}
+            onsuccess={handleSuccess}
+            >
+    <lightning-input-field field-name="Subject"></lightning-input-field>
+    <lightning-input-field field-name="Description"></lightning-input-field>
+    <lightning-input-field field-name="Origin"></lightning-input-field>
+    <lightning-input-field field-name="Priority"></lightning-input-field>
+    <lightning-input-field field-name="Status"></lightning-input-field>
+    <lightning-button type="submit" label="Create Child Case" variant="brand"></lightning-button>
+    </lightning-record-edit-form>
+    </div>
+</lightning-button>
+
+
+        <div class="slds-m-around_small">
+            <lightning-record-form
+           
+            object-api-name={objectApiName}
+            layout-type="Full"
+            mode="edit"
+             columns="2"
+             onsubmit={handleSubmit}
+             onsuccess={handleSuccess}
+             onerror={handleError}
+            ></lightning-record-form>
+
+
+
+        </div>
+    </lightning-card>  
+</template>

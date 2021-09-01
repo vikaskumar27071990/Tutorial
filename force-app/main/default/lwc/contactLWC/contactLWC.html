@@ -1,0 +1,42 @@
+<template>
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered ">
+        <thead>
+         <tr class="slds-line-height_reset">
+          <th class="" scope="col">
+           <div class="slds-truncate" title="contactModule">Module</div>
+          </th>
+          <th class="" scope="col">
+           <div class="slds-truncate" title="contactName">Name</div>
+          </th>
+          <th class="" scope="col">
+           <div class="slds-truncate" title="contactEmail">Email</div>
+          </th>
+          <th class="" scope="col">
+           <div class="slds-truncate" title="contactPhone">Phone</div>
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <template if:true={mapData}>
+          <template for:each={mapData} for:item="keyValue">
+           <tr key={keyValue.key} class="slds-hint-parent">
+               <th scope="col">
+                   <div>{keyValue.key}</div>
+               </th>
+               <template for:each={keyValue.value} for:item="value">
+                   <div key={value.Name}>
+                       {value.Name}
+                   </div> 
+                   <div key={value.Email}>
+                       {value.Email}
+                   </div> 
+                   <div key={value.Phone}>
+                       {value.Phone}
+                   </div> 
+               </template>
+           </tr>      
+          </template>
+         </template>
+        </tbody>
+       </table>
+</template>

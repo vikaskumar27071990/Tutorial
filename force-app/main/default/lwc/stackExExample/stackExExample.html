@@ -1,0 +1,17 @@
+<template>
+    <template for:each={tobeOppProduct} for:item="data">
+        <div class="slds-grid slds-gutters" key={data.Id}>
+            <div class="slds-col slds-text-align_center variant slds-size_1-of-3">
+                {data.ProductName}
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <lightning-input onchange={onfieldchange} type="number" name={data.Id} formatter="currency" step="0.01" value={data.UnitPrice}
+                                 message-when-bad-input="Please enter a Valid amount"></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <lightning-combobox onchange={onfieldchange} name={data.Id} placeholder="-Select-" options={VariantValueOptions}
+                                    value={data.VariantValue}></lightning-combobox>
+            </div>
+        </div>
+    </template>   
+</template>

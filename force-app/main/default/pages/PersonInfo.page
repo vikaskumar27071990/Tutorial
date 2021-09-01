@@ -1,0 +1,8 @@
+<apex:page controller="List_eg_Two">
+    <body style="background-image:url('{!$Resource.background}');">
+        <apex:pageBlock title="PERSON COMPLETE INFORMATION" id="pb">
+
+
+        </apex:pageBlock>
+ </body>
+</apex:page>

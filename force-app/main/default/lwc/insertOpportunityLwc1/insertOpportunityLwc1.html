@@ -1,0 +1,77 @@
+<template>
+    <lightning-card>
+     <div slot="title">
+        <h1>             
+        BDS Opportunity Assingment (2021) 
+        </h1>
+        <div>
+            <p><b>BDS Information</b></p>
+            <p class="slds-p-horizontal_small">
+                <lightning-input type="text" label="BDS" value={getAccountRecord.BDS__c} required onchange={typeInpChange}></lightning-input>
+               </p>
+
+               <p class="slds-p-horizontal_small">
+                <lightning-input type="text" label="BDS Email Address" value={getAccountRecord.BDS_Email_Address__c} required onchange={BDSEmailAddressInpChange}></lightning-input>
+               </p>
+
+        </div>
+      </div>
+      
+      <div>
+   <p><b>Opportunity Information</b></p>
+     <p class="slds-p-horizontal_small">
+       <lightning-input type="text" label="Opportunity Title" value={getAccountRecord.name} required onchange={nameInpChange}></lightning-input>
+      </p>
+
+      
+     <p class="slds-p-horizontal_small">
+       <lightning-input type="text" label="Solicitation Number" value={getAccountRecord.Solicitation_Number__c} required onchange={SolicitationNumberInpChange}></lightning-input>
+      </p>
+
+     
+     <p class="slds-p-horizontal_small">
+       <lightning-input type="text" label="Agency" value={getAccountRecord.Agency__c} required onchange={AgencyInpChange}></lightning-input>
+      </p>
+
+      <p class="slds-p-horizontal_small">
+        <lightning-input type="text" label="Office" value={getAccountRecord.Office__c} required onchange={OfficeInpChange}></lightning-input>
+       </p>
+      
+       <p class="slds-p-horizontal_small">
+        <lightning-input type="text" label="Lowest Sub Tier" value={getAccountRecord.Lowest_Sub_Tier__c}  onchange={LowestSubTierInpChange}></lightning-input>
+       </p>
+
+       <p class="slds-p-horizontal_large">
+        <lightning-input type="text" label="Notice Type" value={getAccountRecord.Notice_Type__c}  onchange={NoticeTypeInpChange}></lightning-input>
+       </p>
+
+   <!-- 
+      <p class="slds-p-horizontal_small">
+       <lightning-input type="text" label="Phone" value={getAccountRecord.Phone} onchange={phoneInpChange}></lightning-input>
+      </p>
+   
+   <p class="slds-p-horizontal_small">
+    <lightning-input type="text" label="Name" value={getAccountRecord.Name} onchange={nameInpChange}></lightning-input>
+   </p>
+--> 
+      <p class="slds-p-horizontal_small">
+        <lightning-input type="text" label="Type" value={getAccountRecord.Type} onchange={typeInpChange}></lightning-input>
+       </p>
+   
+       <p class="slds-p-horizontal_small">
+        <lightning-input type="text" label="StageName" value={getAccountRecord.StageName} onchange={StageNameInpChange}></lightning-input>
+       </p>
+         
+   
+       <p class="slds-p-horizontal_small">
+        <lightning-input type="date" label="CloseDate[MM/DD/YYYY]" value={getAccountRecord.CloseDate} onchange={CloseDateInpChange}></lightning-input>       
+       </p> 
+    </div>
+
+
+     <div slot="footer">
+       <lightning-button label="Submit" onclick={saveAccountAction} variant="brand"></lightning-button>
+     </div>
+   
+   </lightning-card>
+  </template>

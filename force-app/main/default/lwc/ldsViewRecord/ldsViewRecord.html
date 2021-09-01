@@ -1,0 +1,56 @@
+<template>
+    <!--<lightning-card>
+        <lightning-icon icon-name="action:approval" alternative-text="Approved" ></lightning-icon>
+        <lightning-icon icon-name="doctype:audio" alternative-text="Audio file" ></lightning-icon>
+        <lightning-icon icon-name="standard:event" alternative-text="Event" ></lightning-icon>
+        <lightning-icon icon-name="utility:connected_apps" alternative-text="Connected" ></lightning-icon>
+        <lightning-icon icon-name="utility:warning" alternative-text="Warning!" variant="warning"></lightning-icon>
+        <lightning-icon icon-name="utility:error" alternative-text="Error!" variant="error"></lightning-icon>
+        <lightning-icon icon-name="utility:image" alternative-text="Utility image" ></lightning-icon>
+        <lightning-icon icon-name="doctype:image" alternative-text="Doc image" ></lightning-icon>
+    </lightning-card>-->
+   <!-- <lightning-card>
+        <h3 slot="title">
+            <img src={insta} alt="insta" class="customIcon">
+            Card Title - 1 
+        </h3>
+        <div slot="footer">
+                <lightning-badge label="Tag1"></lightning-badge>
+                <lightning-badge label="Tag2"></lightning-badge>
+                <lightning-badge label="Tag3"></lightning-badge>
+        </div>
+        <p class="slds-p-horizontal_small">Card Body (custom component)</p>
+    </lightning-card>-->
+
+
+    <lightning-card>
+        <div class="slds-m-around_small"><h1>RecordId====></h1>{recordId}</div>
+       
+        <div class="slds-m-around_small">
+        <lightning-record-view-form
+        record-id={recordId}
+        object-api-name={objectApiName}>
+<lightning-output-field field-name="Name"></lightning-output-field><br/>
+<lightning-output-field field-name="Phone"></lightning-output-field>
+</lightning-record-view-form>
+</div>
+    <div class="slds-m-around_small">
+
+
+<!--===================================================================================-->
+<lightning-record-form
+record-id={recordId}
+object-api-name={objectApiName}
+layout-type="Compact"
+mode="view"
+columns="2"
+onsubmit={handleSubmit}
+onsuccess={handleSuccess}
+>
+
+</lightning-record-form>
+
+
+</div>
+ </lightning-card>   
+</template>

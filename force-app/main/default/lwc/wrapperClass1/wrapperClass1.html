@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="LWC Wrapper Component">
+        <template if:true={wrappers.data}>
+            <template for:each={wrappers.data} for:item="wrapper">
+                <p key={wrapper.con.Id}>
+                    {wrapper.con.Name}<br/>
+                    
+                    {wrapper.con.Title}<br/>
+                    {wrapper.con.Phone}<br/>
+                    {wrapper.con.Email}<br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/>
+
+                </p>
+
+            </template>
+        </template>
+    </lightning-card>
+</template>

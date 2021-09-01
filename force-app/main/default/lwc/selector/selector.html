@@ -1,0 +1,37 @@
+<template>
+    <!--<div class="wrapper">
+        <header class="header">Available Bikes for {name}</header>
+        <section class="content">
+            <div class="columns">
+            <main class="main" >
+                <c-list onproductselected={handleProductSelected}></c-list>
+            </main>
+            <aside class="sidebar-second">
+                <c-detail product-id={selectedProductId}></c-detail>
+            </aside>
+            </div>
+        </section>
+        </div>-->
+
+
+
+    <template if:true={product}>
+    <div class="container">
+        <div class="slds-text-heading_small">{product.fields.Name.value}</div>
+        <div class="price">{product.fields.MSRP__c.displayValue}</div>
+        <div class="description">{product.fields.Description__c.value}</div>
+        <img class="product-img" src={product.fields.Picture_URL__c.value}></img>
+        <p>
+            <lightning-badge label={product.fields.Material__c.value}></lightning-badge>
+            <lightning-badge label={product.fields.Level__c.value}></lightning-badge>
+        </p>
+        <p>
+            <lightning-badge label={product.fields.Category__c.value}></lightning-badge>
+        </p>
+    </div>
+    </template>
+    <template if:false={product}>
+    <div class="slds-text-heading_medium">Select a bike</div>
+    <header class="header">Available Bikes for {name}</header>
+    </template>
+</template>

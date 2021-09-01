@@ -1,0 +1,43 @@
+.body, html { 
+    height: 100%; 
+    margin: 0; 
+} 
+.bg { 
+/* The image used */ background-image: url("https://c4.wallpaperflare.com/wallpaper/82/204/3/keanu-reeves-john-wick-movies-john-wick-chapter-2-wallpaper-preview.jpg"); 
+height: 500px; 
+background-position: center; 
+background-repeat: no-repeat; 
+background-size: cover; 
+}
+    
+    
+    
+    body {
+        background-image: url("https://i.pinimg.com/originals/ed/f9/38/edf9388cdf140314c92d7cc6e4fd0ecc.jpg");
+        background-repeat:repeat;
+    }
+   
+    body{
+    margin: 0;
+    padding: 0;
+    }
+    
+    .div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    
+  
+    .blinking{
+        animation:blinkingText 1.2s infinite;
+    }
+    @keyframes blinkingText{
+        0%{     color: rgb(5, 243, 252);    }
+        49%{    color: rgb(252, 7, 7); }
+        60%{    color: transparent; }
+        99%{    color:transparent;  }
+        100%{   color: #000;    }
+    }
+    

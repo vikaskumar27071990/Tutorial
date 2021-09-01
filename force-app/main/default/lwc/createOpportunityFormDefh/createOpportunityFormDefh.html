@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Opportunity Creation" icon-name="standard:record">
+        <div class="slds-m-around_medium">
+            <lightning-button label="Create Opportunity" variant="brand" onclick={createOpportunity}></lightning-button>
+           <br/><br/>
+           <lightning-input label="Name" onchange={handleChange} class="slds-m-bottom_x-small"></lightning-input>
+           <!--<lightning-input label="Phone" onchange={handleChange} class="slds-m-bottom_x-small"></lightning-input>-->           
+           
+           <p class="slds-p-horizontal_small">
+            <lightning-input type="date" label="CloseDate[MM/DD/YYYY]" variant="brand" onchange={createOpportunity}></lightning-input>       
+           </p><br/><br/><br/>
+        </div>
+    </lightning-card>   
+</template>

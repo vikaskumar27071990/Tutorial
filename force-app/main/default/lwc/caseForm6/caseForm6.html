@@ -1,0 +1,39 @@
+<template>
+    <div>
+        <lightning-button class="slds-m-around_medium" label="Create New Account" onclick={navigateToNewAccount}></lightning-button> 
+        <!--<lightning-button class="slds-m-around_medium" label="Create New Contact" onclick={navigateToNewContact}></lightning-button> 
+        <lightning-button class="slds-m-around_medium" label="Create New Asset" onclick={navigateToNewAssert}></lightning-button> -->
+
+
+    </div>
+    
+    <lightning-card class="blinking" title="Phone To Case">
+        
+        <lightning-layout>
+            <lightning-layout-item>
+                <lightning-record-edit-form
+                object-api-name="Case"
+                onsuccess={handleSuccess}>
+
+                <lightning-input-field field-name={Account}></lightning-input-field>
+           <lightning-input-field field-name={Contact}></lightning-input-field>
+           <lightning-input-field field-name={Asset}></lightning-input-field>
+           <lightning-input-field field-name={caseType}></lightning-input-field>
+           <lightning-input-field field-name={CaseSubject}></lightning-input-field>
+
+           <lightning-input-field field-name={caseCategory}></lightning-input-field>
+           <lightning-input-field field-name={CaseErrorCode}></lightning-input-field>
+
+           <lightning-input-field field-name={caseStatus}></lightning-input-field> 
+           <lightning-input-field field-name={caseOrigin}></lightning-input-field>
+           <lightning-input-field field-name={CaseDescription}></lightning-input-field>
+           <lightning-input-field field-name={AssetName}></lightning-input-field>
+           <!--<lightning-input-field field-name={Parent_Account_Name}></lightning-input-field>-->
+
+           <lightning-button variant="brand" type="submit" name="save" label="Save"></lightning-button>
+ </lightning-record-edit-form>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>  
+<!--</div></div>-->
+</template>

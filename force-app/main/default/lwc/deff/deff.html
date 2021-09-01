@@ -1,0 +1,33 @@
+<template>
+    <lightning-card>
+     <p class="slds-p-horizontal_small">
+       <lightning-input type="text" label="Opportunity Title" value={getAccountRecord.Name}  onchange={nameInpChange}></lightning-input>
+      </p>
+           
+       <p class="slds-p-horizontal_small">
+        <lightning-input type="date" label="CloseDate[MM/DD/YYYY]" value={getAccountRecord.CloseDate} onchange={accSiteChange}></lightning-input>       
+       </p> 
+
+       <lightning-combobox
+            name="Opportunity Form Type"
+            label="Opportunity Form Type"
+            value={TypeValue}
+            placeholder="Select Type"
+            options={Type}></lightning-combobox>
+
+
+            <lightning-combobox
+            name="Opportunity Form Stage"
+            label="Opportunity Form Stage"
+            value={StageValue}
+            placeholder="Select Stage"
+            options={StageName}></lightning-combobox>
+       
+     <div slot="footer">
+       <lightning-button label="Submit" onclick={saveAccountAction} variant="brand"></lightning-button>
+     </div>
+   <div>
+     
+   </div>
+   </lightning-card>
+  </template>

@@ -1,0 +1,86 @@
+<template>
+    <lightning-card>
+      
+      <p class="slds-p-horizontal_small">
+        <lightning-input type="text" label="BDS" value={getAccountRecord.BDS__c}  onchange={BDSInpChange}></lightning-input>
+       </p>
+   
+      <p class="slds-p-horizontal_small">
+        <lightning-input type="text" label="BDS Email Address" value={getAccountRecord.BDS_Email_Address__c} pattern={regexEmail}  onchange={BDSEmailAddressInpChange}></lightning-input>
+       </p>
+
+      
+     <p class="slds-p-horizontal_small">
+       <lightning-input type="text" label="Opportunity Title" value={getAccountRecord.Name} pattern={alphanum_validation} onchange={nameInpChange}></lightning-input>
+      </p>
+           <p class="slds-p-horizontal_small">
+        <lightning-input type="text" label="Solication Number" value={getAccountRecord.Solicitation_Number__c} pattern={alphanum_validation} onchange={SolicitationNumberInpChange}></lightning-input>
+       </p>
+       
+       <p class="slds-p-horizontal_small">
+        <lightning-input type="text" label="Agency" value={getAccountRecord.Agency__c} pattern={alphanum_validation} onchange={AgencyInpChange}></lightning-input>
+       </p>
+
+       <p class="slds-p-horizontal_small">
+        <lightning-input type="text" label="Office" value={getAccountRecord.Office__c} pattern={alphanum_validation} onchange={OfficeInpChange}></lightning-input>
+       </p>
+  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX--> 
+
+  <p class="slds-p-horizontal_small">
+    <lightning-input type="text" label="Lowest Sub Tier" value={getAccountRecord.Lowest_Sub_Tier__c} pattern={alphanum_validation} onchange={LowestSubTierInpChange}></lightning-input>
+   </p>
+
+   <p class="slds-p-horizontal_small">
+    <lightning-input type="text" label="Notice Type" value={getAccountRecord.Notice_Type__c} pattern={alphanum_validation} onchange={NoticeTypeInpChange}></lightning-input>
+   </p>
+  
+  
+       <!--
+      <p class="slds-p-horizontal_small">
+       <lightning-input type="text" label="Phone" value={getAccountRecord.Phone} onchange={phoneInpChange}></lightning-input>
+      </p>
+   
+
+   <label for="start">Start date:</label>
+
+<input type="date" id="start" name="trip-start">
+ 
+<p class="slds-p-horizontal_small">
+        <lightning-input type="text" label="Type" value={getAccountRecord.Type} onchange={typeInpChange}></lightning-input>
+       </p>
+
+
+    
+    <label for="Type">Type</label>
+<select id="Type" name="Type">
+  <option value="New Customer">New Customer</option>
+  <option value="Existing Customer-Upgrade">Existing Customer-Upgrade</option>
+  <option value="Existing Customer-Replacement">Existing Customer-Replacement</option>
+  <option value="Existing Customer-downgrade">Existing Customer-downgrade</option>
+</select>
+
+<p class="slds-p-horizontal_small">
+  <lightning-input type="text" label="Type" value="New Customer"  onchange={typeInpChange}></lightning-input>
+ </p>
+ 
+-->
+ <p class="slds-p-horizontal_small">
+  <lightning-input type="text" label="Type"  value={getAccountRecord.Type}  onchange={typeInpChange}></lightning-input>
+ </p>
+       <p class="slds-p-horizontal_small">
+        <lightning-input type="text" label="StageName" value={getAccountRecord.StageName} onchange={websiteInpChange}></lightning-input>
+       </p>
+         
+   
+       <p class="slds-p-horizontal_small">
+        <lightning-input type="date" label="CloseDate[MM/DD/YYYY]" value={getAccountRecord.CloseDate} onchange={accSiteChange}></lightning-input>       
+       </p> 
+       
+     <div slot="footer">
+       <lightning-button label="Submit" onclick={saveAccountAction} variant="brand"></lightning-button>
+     </div>
+   <div>
+     
+   </div>
+   </lightning-card>
+  </template>

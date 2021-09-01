@@ -1,0 +1,56 @@
+<template>
+<lightning-card title={cardTitle} icon-name="custom:custom85">
+    <div class="slds-m-around_medium">
+        <lightning-record-edit-form object-api-name="Opportunity" onsuccess={handleSuccess}>
+            
+            <lightning-messages>
+            </lightning-messages>
+            
+            <lightning-input-field field-name="Name" pattern={name_validation}>
+            </lightning-input-field>
+
+            <lightning-input-field field-name="Category__c">
+            </lightning-input-field>
+             
+            <lightning-input-field field-name="DoD_Communities_Of_Interest__c">
+            </lightning-input-field>
+
+            <lightning-input-field field-name="Website__c">
+            </lightning-input-field>
+
+            <lightning-input-field field-name="Subject">
+            </lightning-input-field>
+
+            <lightning-input type="date" label="Due Date[MM/DD/YYYY]" ></lightning-input>
+
+            <lightning-input-field field-name="Government_Organisation__c">
+            </lightning-input-field>
+
+            <lightning-input-field field-name="Response_Date__c">
+            </lightning-input-field>
+
+            <lightning-input-field field-name="StageName">
+            </lightning-input-field>
+
+            <lightning-input-field field-name="CloseDate">
+            </lightning-input-field>
+
+            <lightning-input-field field-name="Type">
+            </lightning-input-field>
+
+            <!--<lightning-input-field type="checkbox" field-name="check__c"></lightning-input-field>-->
+            
+
+                  
+            <!--Parent account for opportunity-->
+            <lightning-input-field field-name="AccountId" value={recordId}>
+            </lightning-input-field>
+            <lightning-button
+            class="slds-m-top_small"
+            type="submit"
+            label="Create new">
+        </lightning-button>
+         </lightning-record-edit-form>
+    </div>   
+</lightning-card>   
+</template>

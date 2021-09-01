@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Case Details" icon-name="standard:case">
+     <div class="slds-around_small">
+         <div>
+<lightning-input value={subject}  label="Search By Subject" onchange={handelChange}></lightning-input>
+
+         </div>
+  <template for:each={records} for:item="item">
+  <p key={item.Id}>
+  {item.Subject}
+  {item.Status}
+  </p>
+  </template>
+    <template if:true={errors}>
+         There is Error While featching Cases
+    </template>
+  
+     </div>
+    </lightning-card>  
+  </template>

@@ -1,0 +1,21 @@
+<template>
+    <div class="slds-m-left_small">
+        <center>
+            <div class="slds-box animation" style="width: 1160px; height:400px;background-color: gray; ">
+                <lightning-button-icon icon-name="utility:chevronleft" disabled={isPreviousButtonDisabled} class="slds-p-around_small"  style="position: relative;float:left;top:50%" variant="bare" onclick={previousImage} alternative-text="previous Image" title="left"></lightning-button-icon>
+                <lightning-button-icon icon-name="utility:chevronright" disabled={isNextButtonDisabled}  class="slds-p-around_small" style="position: relative; float:right; top:50%" variant="bare" onclick={NextImage} alternative-text="Next Image" title="right"></lightning-button-icon>
+                <div class="slds-grid slds-wrap ">
+                    <template for:each={currentDisplayImage} for:item="imageSrc">
+                        <div class={caroselClass} key={imageSrc}>
+                            <div class="slds-box slds-m-left_x-small slds-m-right_x-small"  style="background-color: white; float:left" >
+                                <img src={imageSrc.url} key={imageSrc} style="height: 190px;width:100%">
+                               
+                            </div>
+
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </center>   
+    </div>
+</template>
